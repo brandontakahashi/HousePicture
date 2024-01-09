@@ -44,7 +44,7 @@ public class Picture
             grass.makeVisible();
 
             window.changeColor("black");
-            window.moveHorizontal(-120);
+            window.moveHorizontal(-121);
             window.moveVertical(40);
             window.changeSize(30);
             window.makeVisible();
