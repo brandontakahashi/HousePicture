@@ -3,6 +3,7 @@ public class Picture
     private Square wall;
     private Square window;
     private Triangle roof;
+    private Square grass;
     private Circle sun;
     private boolean drawn;
 
@@ -14,6 +15,7 @@ public class Picture
         wall = new Square();
         window = new Square();
         roof = new Triangle();
+        grass = new Square();
         sun = new Circle();
         drawn = false;
     }
@@ -29,15 +31,22 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            wall.changeColor("yellow");
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
             wall.changeSize(100);
             wall.makeVisible();
 
+            grass.changeColor("green");
+            grass.moveHorizontal(0);
+            grass.moveVertical(0);
+            grass.changeSize(60);
+            grass.makeVisible();
+
             window.changeColor("black");
             window.moveHorizontal(-120);
             window.moveVertical(40);
-            window.changeSize(30;
+            window.changeSize(30);
             window.makeVisible();
 
             roof.changeSize(60, 180);
