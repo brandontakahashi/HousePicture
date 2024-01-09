@@ -31,7 +31,7 @@ public class Picture
         if(!drawn) {
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
-            wall.changeSize(10);
+            wall.changeSize(100);
             wall.makeVisible();
 
             window.changeColor("black");
