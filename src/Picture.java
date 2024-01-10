@@ -1,10 +1,15 @@
 public class Picture
 {
     private Square wall;
+    private Square wall1;
+    private Square wall2;
+    private Square concrete;
     private Square window;
     private Triangle roof;
-    private Square grass;
+    private Triangle roof1;
+    private Square roof2;
     private Circle sun;
+    private Square garage;
     private boolean drawn;
 
     /**
@@ -13,10 +18,14 @@ public class Picture
     public Picture()
     {
         wall = new Square();
-        window = new Square();
+        wall1 = new Square();
+        wall2 = new Square();
         roof = new Triangle();
-        grass = new Square();
-        sun = new Circle();
+        roof1 = new Triangle();
+        roof2 = new Square();
+        concrete = new Square();
+        garage = new Square();
+
         drawn = false;
     }
 
@@ -31,34 +40,52 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.changeColor("yellow");
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(100);
-            wall.makeVisible();
+            wall.changeColor("red");
+            wall.moveHorizontal(100);
+            wall.moveVertical(130);
+            wall.changeSize(120);
 
-            grass.changeColor("green");
-            grass.moveHorizontal(0);
-            grass.moveVertical(0);
-            grass.changeSize(60);
-            grass.makeVisible();
+            wall1.changeColor("green");
+            wall1.moveHorizontal(200);
+            wall1.moveVertical(130);
+            wall1.changeSize(120);
 
-            window.changeColor("black");
-            window.moveHorizontal(-121);
-            window.moveVertical(40);
-            window.changeSize(30);
-            window.makeVisible();
+            roof2.changeColor("black");
+            roof2.moveHorizontal(40);
+            roof2.moveVertical(80);
+            roof2.changeSize(210);
+            roof2.makeVisible();
 
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-100);
+            wall2.changeColor("yellow");
+            wall2.moveHorizontal(40);
+            wall2.moveVertical(120);
+            wall2.changeSize(220);
+            wall2.makeVisible();
+
+            garage.changeColor("white");
+            garage.moveHorizontal(80);
+            garage.moveVertical(160);
+            garage.changeSize(145);
+            garage.makeVisible();
+
+            concrete.changeColor("black");
+            concrete.moveHorizontal(40);
+            concrete.moveVertical(260);
+            concrete.changeSize(220);
+            concrete.makeVisible();
+
+            roof.changeColor("black");
+            roof.moveHorizontal(40);
+            roof.moveVertical(80);
+            roof.changeSize(40,40);
             roof.makeVisible();
 
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            roof1.changeColor("black");
+            roof1.moveHorizontal(250);
+            roof1.moveVertical(80);
+            roof1.changeSize(40,40);
+            roof1.makeVisible();
+
             drawn = true;
         }
     }
