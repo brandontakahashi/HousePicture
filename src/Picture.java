@@ -8,8 +8,13 @@ public class Picture
     private Triangle roof;
     private Triangle roof1;
     private Square roof2;
+    private Triangle roof3;
+    private Square roof4;
     private Circle sun;
     private Square garage;
+    private Square garage2;
+    private Square grass;
+    private Square door;
     private boolean drawn;
 
     /**
@@ -23,8 +28,13 @@ public class Picture
         roof = new Triangle();
         roof1 = new Triangle();
         roof2 = new Square();
+        roof3 = new Triangle();
+        roof4 = new Square();
         concrete = new Square();
         garage = new Square();
+        garage2 = new Square();
+        grass = new Square();
+        door = new Square();
 
         drawn = false;
     }
@@ -40,15 +50,24 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.changeColor("red");
-            wall.moveHorizontal(100);
-            wall.moveVertical(130);
-            wall.changeSize(120);
 
-            wall1.changeColor("green");
-            wall1.moveHorizontal(200);
+            roof4.changeColor("black");
+            roof4.moveHorizontal(260);
+            roof4.moveVertical(100);
+            roof4.changeSize(200);
+            roof4.makeVisible();
+
+            wall.changeColor("tan2");
+            wall.moveHorizontal(150);
+            wall.moveVertical(130);
+            wall.changeSize(170);
+            wall.makeVisible();
+
+            wall1.changeColor("tan");
+            wall1.moveHorizontal(265);
             wall1.moveVertical(130);
-            wall1.changeSize(120);
+            wall1.changeSize(200);
+            wall1.makeVisible();
 
             roof2.changeColor("black");
             roof2.moveHorizontal(40);
@@ -56,11 +75,17 @@ public class Picture
             roof2.changeSize(210);
             roof2.makeVisible();
 
-            wall2.changeColor("yellow");
+            wall2.changeColor("tan");
             wall2.moveHorizontal(40);
             wall2.moveVertical(120);
             wall2.changeSize(220);
             wall2.makeVisible();
+
+            garage2.changeColor("black");
+            garage2.moveHorizontal(75);
+            garage2.moveVertical(155);
+            garage2.changeSize(155);
+            garage2.makeVisible();
 
             garage.changeColor("white");
             garage.moveHorizontal(80);
@@ -68,7 +93,7 @@ public class Picture
             garage.changeSize(145);
             garage.makeVisible();
 
-            concrete.changeColor("black");
+            concrete.changeColor("grey");
             concrete.moveHorizontal(40);
             concrete.moveVertical(260);
             concrete.changeSize(220);
@@ -85,6 +110,24 @@ public class Picture
             roof1.moveVertical(80);
             roof1.changeSize(40,40);
             roof1.makeVisible();
+
+            grass.changeColor("green");
+            grass.moveHorizontal(260);
+            grass.moveVertical(245);
+            grass.changeSize(205);
+            grass.makeVisible();
+
+            roof3.changeColor("black");
+            roof3.moveHorizontal(460);
+            roof3.moveVertical(100);
+            roof3.changeSize(30,30);
+            roof3.makeVisible();
+
+            door.changeColor("brown");
+            door.moveHorizontal(350);
+            door.moveVertical(225);
+            door.changeSize(20);
+            door.makeVisible();
 
             drawn = true;
         }

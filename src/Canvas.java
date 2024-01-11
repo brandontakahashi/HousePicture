@@ -19,7 +19,7 @@ public class Canvas
     {
         if(canvasSingleton == null) {
             canvasSingleton = new Canvas("BlueJ Picture Demo", 500, 300,
-                    Color.white);
+                    Color.cyan);
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;
@@ -133,6 +133,23 @@ public class Canvas
         else if(colorString.equals("white")) {
             graphic.setColor(Color.white);
         }
+
+        else if(colorString.equals("grey")) {
+            graphic.setColor(new Color(87, 86, 86));
+        }
+
+        else if(colorString.equals("tan")) {
+            graphic.setColor(new Color(210, 180, 140));
+        }
+
+        else if(colorString.equals("tan2")) {
+            graphic.setColor(new Color(208, 177, 144));
+        }
+
+        else if(colorString.equals("brown")) {
+            graphic.setColor(new Color(65, 42, 42));
+        }
+
         else {
             graphic.setColor(Color.black);
         }
