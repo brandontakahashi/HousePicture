@@ -4,7 +4,6 @@ public class Picture
     private Square wall1;
     private Square wall2;
     private Square concrete;
-    private Square window;
     private Triangle roof;
     private Triangle roof1;
     private Square roof2;
@@ -15,6 +14,12 @@ public class Picture
     private Square garage2;
     private Square grass;
     private Square door;
+    private Square door1;
+    private Circle doorknob;
+
+    private Square window;
+    private Square window1;
+    private Square window2;
     private boolean drawn;
 
     /**
@@ -22,6 +27,7 @@ public class Picture
      */
     public Picture()
     {
+        sun = new Circle();
         wall = new Square();
         wall1 = new Square();
         wall2 = new Square();
@@ -35,6 +41,11 @@ public class Picture
         garage2 = new Square();
         grass = new Square();
         door = new Square();
+        door1 = new Square();
+        doorknob = new Circle();
+        window = new Square();
+        window1 = new Square();
+        window2 = new Square();
 
         drawn = false;
     }
@@ -50,6 +61,12 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+
+            sun.changeColor("yellow");
+            sun.moveHorizontal(400);
+            sun.moveVertical(20);
+            sun.changeSize(55);
+            sun.makeVisible();
 
             roof4.changeColor("black");
             roof4.moveHorizontal(260);
@@ -124,10 +141,34 @@ public class Picture
             roof3.makeVisible();
 
             door.changeColor("brown");
-            door.moveHorizontal(350);
-            door.moveVertical(225);
-            door.changeSize(20);
+            door.moveHorizontal(345);
+            door.moveVertical(205);
+            door.changeSize(40);
             door.makeVisible();
+
+            door1.changeColor("brown");
+            door1.moveHorizontal(345);
+            door1.moveVertical(190);
+            door1.changeSize(40);
+            door1.makeVisible();
+
+            doorknob.changeColor("black");
+            doorknob.moveHorizontal(370);
+            doorknob.moveVertical(210);
+            doorknob.changeSize(10);
+            doorknob.makeVisible();
+
+            window.changeColor("white");
+            window.moveHorizontal(290);
+            window.moveVertical(170);
+            window.changeSize(30);
+            window.makeVisible();
+
+            window1.changeColor("white");
+            window1.moveHorizontal(290);
+            window1.moveVertical(180);
+            window1.changeSize(30);
+            window1.makeVisible();
 
             drawn = true;
         }
