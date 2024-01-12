@@ -14,10 +14,10 @@ public class Person
      */
     public Person()
     {
-        height = 60;
-        width = 30;
-        xPosition = 280;
-        yPosition = 190;
+        height = 0;
+        width = 0;
+        xPosition = 0;
+        yPosition = 0;
         color = "black";
         isVisible = false;
     }

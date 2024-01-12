@@ -16,10 +16,17 @@ public class Picture
     private Square door;
     private Square door1;
     private Circle doorknob;
-
     private Square window;
     private Square window1;
     private Square window2;
+    private Square window3;
+    private Square window4;
+    private Square window5;
+    private Square window6;
+    private Square window7;
+    private Square window8, window9, window10, window11;
+    private Square path, path1, path2;
+    private Person person, person2;
     private boolean drawn;
 
     /**
@@ -46,6 +53,20 @@ public class Picture
         window = new Square();
         window1 = new Square();
         window2 = new Square();
+        window3 = new Square();
+        window4 = new Square();
+        window5 = new Square();
+        window6 = new Square();
+        window7 = new Square();
+        window8 = new Square();
+        window9 = new Square();
+        window10 = new Square();
+        window11 = new Square();
+        path = new Square();
+        path1 = new Square();
+        path2 = new Square();
+        person = new Person();
+        person2 = new Person();
 
         drawn = false;
     }
@@ -158,6 +179,30 @@ public class Picture
             doorknob.changeSize(10);
             doorknob.makeVisible();
 
+            window8.changeColor("black");
+            window8.moveHorizontal(285);
+            window8.moveVertical(165);
+            window8.changeSize(40);
+            window8.makeVisible();
+
+            window9.changeColor("black");
+            window9.moveHorizontal(405);
+            window9.moveVertical(165);
+            window9.changeSize(40);
+            window9.makeVisible();
+
+            window10.changeColor("black");
+            window10.moveHorizontal(285);
+            window10.moveVertical(175);
+            window10.changeSize(40);
+            window10.makeVisible();
+
+            window11.changeColor("black");
+            window11.moveHorizontal(405);
+            window11.moveVertical(175);
+            window11.changeSize(40);
+            window11.makeVisible();
+
             window.changeColor("white");
             window.moveHorizontal(290);
             window.moveVertical(170);
@@ -169,6 +214,72 @@ public class Picture
             window1.moveVertical(180);
             window1.changeSize(30);
             window1.makeVisible();
+
+            window2.changeColor("white");
+            window2.moveHorizontal(410);
+            window2.moveVertical(180);
+            window2.changeSize(30);
+            window2.makeVisible();
+
+            window3.changeColor("white");
+            window3.moveHorizontal(410);
+            window3.moveVertical(170);
+            window3.changeSize(30);
+            window3.makeVisible();
+
+            window4.changeColor("cyan");
+            window4.moveHorizontal(418);
+            window4.moveVertical(173);
+            window4.changeSize(14);
+            window4.makeVisible();
+
+            window5.changeColor("cyan");
+            window5.moveHorizontal(418);
+            window5.moveVertical(190);
+            window5.changeSize(14);
+            window5.makeVisible();
+
+            window6.changeColor("cyan");
+            window6.moveHorizontal(298);
+            window6.moveVertical(173);
+            window6.changeSize(14);
+            window6.makeVisible();
+
+            window7.changeColor("cyan");
+            window7.moveHorizontal(298);
+            window7.moveVertical(190);
+            window7.changeSize(14);
+            window7.makeVisible();
+
+            path.changeColor("grey");
+            path.moveHorizontal(350);
+            path.moveVertical(270);
+            path.changeSize(30);
+            path.makeVisible();
+
+            path1.changeColor("grey");
+            path1.moveHorizontal(330);
+            path1.moveVertical(245);
+            path1.changeSize(35);
+            path1.makeVisible();
+
+            path2.changeColor("grey");
+            path2.moveHorizontal(365);
+            path2.moveVertical(245);
+            path2.changeSize(35);
+            path2.makeVisible();
+
+            person.changeColor("black");
+            person.moveHorizontal(296);
+            person.moveVertical(255);
+            person.changeSize(50,30);
+            person.makeVisible();
+
+            person2.changeColor("black");
+            person2.moveHorizontal(430);
+            person2.moveVertical(255);
+            person2.changeSize(50,30);
+            person2.makeVisible();
 
             drawn = true;
         }
@@ -192,6 +303,5 @@ public class Picture
         wall.changeColor("red");
         window.changeColor("black");
         roof.changeColor("green");
-        sun.changeColor("yellow");
     }
 }
